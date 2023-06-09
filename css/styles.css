@@ -1,0 +1,206 @@
+/*Plus Jakarta Sans Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+:root{
+
+  /*colors*/
+  --col-red: hsl(1, 90%, 64%);
+  --col-blue: hsl(219, 85%, 26%);
+    
+  --col-white: hsl(0, 0%, 100%);
+  --col-very-light-grayish-blue: hsl(210, 60%, 98%);
+  --col-light-grayish-blue1: hsl(211, 68%, 94%);
+  --col-light-grayish-blue2: hsl(205, 33%, 90%);
+  --col-grayish-blue: hsl(219, 14%, 63%);
+  --col-dark-grayish-blue: hsl(219, 12%, 42%);
+  --col-very-dark-blue: hsl(224, 21%, 14%);
+
+  --fw-500:500;
+  --fw-800:800;
+}
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+body{
+  display: flex;
+  padding: 2rem;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+.container{
+  max-width: 900px;
+}
+
+/*----------------------------
+------------HEADER------------
+-----------------------------*/
+.header{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 25px;
+}
+.notification-title{
+  font-size: 1.25rem;
+  font-weight: var(--fw-800);
+  color: var(--col-very-dark-blue);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.notification-number{
+  background-color: var(--col-blue);
+  padding: 3px 10px;
+  margin-left: 10px;
+  font-size: 0.8rem;
+  color: var(--col-light-grayish-blue1);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+}
+.mark-as-read{
+  color: var(--col-dark-grayish-blue);
+  font-size: smaller;
+}
+.mark-as-read:hover{
+  cursor: pointer;
+  color:var(--col-blue);
+}
+
+/*----------------------------
+--------NOTIFICATIONS---------
+-----------------------------*/
+.notifications{
+  padding: 25px;
+}
+.notification{
+  display: grid;
+  margin-bottom: 7px;
+  padding: 12px 15px;
+  background-color: var(--col-white);
+  border-radius: 7px;
+  grid-template-columns: 40px 8fr;
+}
+.notification.marked{
+  background-color: var(--col-light-grayish-blue1);
+}
+.notification.marked:hover{
+  cursor: pointer;
+}
+.user-img{
+  max-width: 40px;
+}
+.user-img img{
+  width: 100%;
+}
+.notification-info{
+  margin-left: 15px;
+}
+.info{
+  font-size: 0.9rem;
+  color: var(--col-dark-grayish-blue);
+}
+.user-name{
+  font-weight: var(--fw-800);
+  color: var(--col-very-dark-blue);
+  margin-right: 5px;
+  font-size: 1rem;
+}
+.post-name{
+  font-weight: var(--fw-800);
+  margin-left: 10px;
+}
+.post-name img{
+  max-width: 30px;
+}
+.user-name:hover, .post-name:hover{
+  cursor: pointer;
+  color: var(--col-blue);
+}
+.not-read{
+  font-size: 12px;
+  color: var(--col-red);
+  margin-left: 15px;
+}
+.notification-time{
+  color: var(--col-grayish-blue);
+  font-size: 0.8rem;
+  margin-top: 3px;
+}
+.message-container{
+  border: 1px solid var(--col-light-grayish-blue2);
+  border-radius: 7px;
+  padding: 15px 20px;
+  margin-top: 16px;
+}
+.message-container-text{
+  color: var(--col-dark-grayish-blue);
+  font-size: 0.8rem;
+  line-height: 20px;
+}
+.message-container:hover{
+  cursor: pointer;
+  background-color: var(--col-light-grayish-blue1);
+}
+
+/*----------------------------
+------------MEDIA-------------
+-----------------------------*/
+@media (max-width:500px){
+  body{
+    padding: 2rem 1rem;
+  }
+}
+@media (max-width:420px){
+  body{
+    padding-inline: 0.5rem;
+   }
+  .notification-title{
+    font-size: 1rem;
+  }
+  .notification{
+    grid-template-columns: 30px 8fr;
+    padding-inline: 9px;
+  }
+}
+@media (max-width:300px){
+  body{
+    padding-inline: 0.3rem;
+  }
+  .header{
+    flex-direction: column;
+    padding-bottom: 0;
+    align-items: flex-start;
+  }
+  .notification-title{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .info{
+    font-size: 0.8rem;
+  }
+  .user-name{
+    font-size: 0.85rem;
+  }
+  .mark-as-read{
+    align-self: flex-end;
+    margin-top: 2rem;
+  }
+}
